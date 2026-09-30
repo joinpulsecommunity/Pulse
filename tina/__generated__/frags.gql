@@ -1,0 +1,68 @@
+fragment SiteParts on Site {
+  __typename
+  hero {
+    __typename
+    text
+  }
+  about {
+    __typename
+    image
+    lead
+    p1
+    p2
+    pillars {
+      __typename
+      title
+      text
+    }
+  }
+  programs {
+    __typename
+    image
+    title
+    text
+  }
+  events {
+    __typename
+    day
+    month
+    title
+    time
+    location
+  }
+  impact {
+    __typename
+    number
+    label
+  }
+  directors {
+    __typename
+    photo
+    name
+    role
+    bio
+  }
+  officers {
+    __typename
+    photo
+    name
+    role
+    bio
+  }
+  gallery {
+    __typename
+    image
+  }
+  involve {
+    __typename
+    title
+    text
+    buttonText
+    buttonUrl
+  }
+  contact {
+    __typename
+    label
+    value
+  }
+}

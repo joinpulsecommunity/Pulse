@@ -49,7 +49,7 @@
           <p class="eyebrow">South Forsyth High School</p>
           <h1>PULSE</h1>
           <p class="hero-full">Public Unified Leadership and Service Enterprise</p>
-          <p class="hero-text placeholder">____________________________________________ ____________________________________________ ______________________</p>
+          <p class="hero-text placeholder" data-bind="hero.text">____________________________________________ ____________________________________________ ______________________</p>
           <div class="hero-actions">
             <a href="#get-involved" class="btn btn-gold">Join PULSE</a>
             <a href="#get-involved" class="btn btn-outline">Donate</a>
@@ -87,18 +87,18 @@
         </header>
         <div class="about-grid">
           <div class="reveal">
-            <div class="img-slot img-slot--tall" role="img" aria-label="Image placeholder">
+            <div class="img-slot img-slot--tall" data-image="about.image" role="img" aria-label="Image placeholder">
               <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="10" width="38" height="28" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="21" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 36l11-10 8 7 7-6 11 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
             </div>
           </div>
           <div class="about-copy reveal">
-            <p class="lead placeholder">______________________________ ______________________________ ______________________________ ______________________</p>
-            <p class="placeholder">______________________________________ ______________________________________ ______________________________________ ______________________________</p>
-            <p class="placeholder">______________________________________ ______________________________________ ______________________________</p>
+            <p class="lead placeholder" data-bind="about.lead">______________________________ ______________________________ ______________________________ ______________________</p>
+            <p class="placeholder" data-bind="about.p1">______________________________________ ______________________________________ ______________________________________ ______________________________</p>
+            <p class="placeholder" data-bind="about.p2">______________________________________ ______________________________________ ______________________________</p>
           </div>
         </div>
 
-        <div class="pillars">
+        <div class="pillars" data-list="about.pillars">
           <article class="pillar reveal">
             <span class="pillar-num">01</span>
             <h3>Our Mission</h3>
@@ -125,7 +125,7 @@
           <p class="eyebrow">What We Do</p>
           <h2>Our Programs</h2>
         </header>
-        <div class="card-grid">
+        <div class="card-grid" data-list="programs">
           <article class="card reveal">
             <div class="img-slot img-slot--card" role="img" aria-label="Image placeholder">
               <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="10" width="38" height="28" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="21" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 36l11-10 8 7 7-6 11 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
@@ -164,7 +164,7 @@
           <p class="eyebrow">On the Calendar</p>
           <h2>Upcoming Events</h2>
         </header>
-        <ul class="events">
+        <ul class="events" data-list="events">
           <li class="event reveal">
             <div class="event-date"><strong>__</strong><span>___</span></div>
             <div class="event-info">
@@ -200,7 +200,7 @@
           <p class="eyebrow">By the Numbers</p>
           <h2>Our Impact</h2>
         </header>
-        <div class="stats">
+        <div class="stats" data-list="impact">
           <div class="stat reveal"><strong>____</strong><span class="placeholder">__________</span></div>
           <div class="stat reveal"><strong>____</strong><span class="placeholder">__________</span></div>
           <div class="stat reveal"><strong>____</strong><span class="placeholder">__________</span></div>
@@ -218,7 +218,7 @@
         </header>
 
         <h3 class="group-title reveal">Directors</h3>
-        <div class="people people--directors">
+        <div class="people people--directors" data-list="directors">
           <article class="person reveal">
             <div class="img-slot img-slot--portrait" role="img" aria-label="Photo placeholder">
               <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="18" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 42c1-9 8-14 16-14s15 5 16 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
@@ -246,7 +246,7 @@
         </div>
 
         <h3 class="group-title reveal">Officers</h3>
-        <div class="people people--officers">
+        <div class="people people--officers" data-list="officers">
           <article class="person reveal">
             <div class="img-slot img-slot--portrait" role="img" aria-label="Photo placeholder">
               <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="18" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 42c1-9 8-14 16-14s15 5 16 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
@@ -290,7 +290,7 @@
           <p class="eyebrow">In Action</p>
           <h2>Gallery</h2>
         </header>
-        <div class="gallery">
+        <div class="gallery" data-list="gallery">
           <div class="img-slot g1 reveal" role="img" aria-label="Image placeholder"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="10" width="38" height="28" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="21" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 36l11-10 8 7 7-6 11 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
           <div class="img-slot g2 reveal" role="img" aria-label="Image placeholder"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="10" width="38" height="28" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="21" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 36l11-10 8 7 7-6 11 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
           <div class="img-slot g3 reveal" role="img" aria-label="Image placeholder"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="10" width="38" height="28" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="21" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 36l11-10 8 7 7-6 11 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
@@ -307,7 +307,7 @@
           <p class="eyebrow">Take Part</p>
           <h2>Get Involved</h2>
         </header>
-        <div class="involve-grid">
+        <div class="involve-grid" data-list="involve">
           <article class="involve reveal">
             <div class="involve-icon" aria-hidden="true">
               <svg viewBox="0 0 48 48"><path d="M24 40S7 30 7 18a9 9 0 0 1 17-4 9 9 0 0 1 17 4c0 12-17 22-17 22z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
@@ -343,7 +343,7 @@
           <p class="eyebrow">Reach Out</p>
           <h2>Contact</h2>
         </header>
-        <div class="contact-grid">
+        <div class="contact-grid" data-list="contact">
           <div class="contact-item reveal"><h3>Email</h3><p class="placeholder">____________________</p></div>
           <div class="contact-item reveal"><h3>Faculty Sponsor</h3><p class="placeholder">____________________</p></div>
           <div class="contact-item reveal"><h3>Meetings</h3><p class="placeholder">____________________</p></div>
@@ -373,7 +373,7 @@
     </div>
     <div class="container footer-bottom">
       <p>&copy; <span id="year">2026</span> PULSE &middot; South Forsyth High School</p>
-      <a href="#top">Back to top &uarr;</a>
+      <p class="footer-links"><a href="/admin/index.html" class="editor-link">Editor Login</a><a href="#top">Back to top &uarr;</a></p>
     </div>
   </footer>
 

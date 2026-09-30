@@ -349,3 +349,14 @@ h1, h2, h3, h4, p { margin: 0; }
   .img-slot--hero { aspect-ratio: 4 / 3; }
 }
 html, body { overflow-x: hidden; }
+
+/* Editable content */
+.involve--featured p:not(.placeholder) { color: rgba(255,255,255,.75); }
+.hero-text:not(.placeholder) { color: rgba(255,255,255,.85); }
+.footer-links { display: flex; gap: 24px; margin: 0; }
+.footer-links a { color: inherit; }
+.footer-links .editor-link { opacity: .6; }
+.footer-links a:hover { color: var(--gold); opacity: 1; }
+.img-slot img { object-fit: cover; }
+.gallery .img-slot:nth-child(n+6) { grid-column: auto; grid-row: auto; }
+.about-copy p:not(.placeholder) { word-break: normal; }
