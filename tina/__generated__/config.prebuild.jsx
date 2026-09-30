@@ -22,8 +22,7 @@ var config_default = defineConfig({
         format: "json",
         match: { include: "site" },
         ui: {
-          allowedActions: { create: false, delete: false },
-          router: () => "/"
+          allowedActions: { create: false, delete: false }
         },
         fields: [
           {

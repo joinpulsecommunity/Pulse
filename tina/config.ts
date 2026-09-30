@@ -32,7 +32,6 @@ export default defineConfig({
         match: { include: "site" },
         ui: {
           allowedActions: { create: false, delete: false },
-          router: () => "/",
         },
         fields: [
           {
