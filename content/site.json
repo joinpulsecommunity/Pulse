@@ -1,42 +1,42 @@
 {
   "hero": {
-    "text": "We are an aspiring leadership and service organization,\nthat directly connects students to volunteer opportunities."
+    "text": "We are an aspiring leadership and service organization that directly connects students to volunteer opportunities."
   },
   "about": {
     "image": "",
-    "lead": "We are a team of people trying to help our community.",
-    "p1": "______________________________________ ______________________________________ ______________________________________ ______________________________",
-    "p2": "______________________________________ ______________________________________ ______________________________",
+    "lead": "Every great community begins with people who choose to show up for one another.",
+    "p1": "PULSE exists to turn good intentions into action. We bring students together around causes that matter, and we make it simple to get involved, give back, and see the difference it makes.",
+    "p2": "Leadership is not a title. It is the decision to serve, to listen, and to lift others up. Together, we are building a school culture where every student has a place to lead.",
     "pillars": [
       {
         "title": "Our Mission",
-        "text": "__________________ __________________ __________________ ____________"
+        "text": "To connect students with meaningful ways to serve, and to develop the leaders our community needs."
       },
       {
         "title": "Our Vision",
-        "text": "__________________ __________________ __________________ ____________"
+        "text": "A school and community where service is a shared habit, and every student believes they can make a difference."
       },
       {
         "title": "Our Values",
-        "text": "__________________ __________________ __________________ ____________"
+        "text": "Compassion, integrity, teamwork, and a commitment to showing up for others."
       }
     ]
   },
   "programs": [
     {
       "image": "",
-      "title": "______________",
-      "text": "____________________ ____________________ ____________________ ________"
+      "title": "Community Service",
+      "text": "Hands-on opportunities to give back, from neighborhood projects to partnerships with local organizations."
     },
     {
       "image": "",
-      "title": "______________",
-      "text": "____________________ ____________________ ____________________ ________"
+      "title": "Fundraising",
+      "text": "Student-led campaigns that turn creativity and effort into real support for the causes we care about."
     },
     {
       "image": "",
-      "title": "______________",
-      "text": "____________________ ____________________ ____________________ ________"
+      "title": "Leadership Development",
+      "text": "Growing confident, capable leaders through responsibility, collaboration, and real-world experience."
     }
   ],
   "events": [
@@ -146,19 +146,19 @@
   "involve": [
     {
       "title": "Volunteer",
-      "text": "____________________ ____________________ ______________",
+      "text": "Give your time and talent. Every hour you serve makes a lasting difference.",
       "buttonText": "Sign Up",
       "buttonUrl": "#contact"
     },
     {
       "title": "Donate",
-      "text": "____________________ ____________________ ______________",
+      "text": "Your support helps us reach more people and make a bigger impact in our community.",
       "buttonText": "Give Now",
       "buttonUrl": "#contact"
     },
     {
       "title": "Join the Club",
-      "text": "____________________ ____________________ ______________",
+      "text": "Become part of a team of students who lead with purpose and serve with heart.",
       "buttonText": "Learn More",
       "buttonUrl": "#contact"
     }

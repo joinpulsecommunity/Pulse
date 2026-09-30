@@ -174,13 +174,52 @@ function initNav() {
   );
 }
 
+// Counts up numbers like "500+" when they scroll into view
+function countUp(el) {
+  if (!el) return;
+  const m = /^(\D*)(\d[\d,]*)(.*)$/.exec(el.textContent.trim());
+  if (!m) return;
+  const target = parseInt(m[2].replace(/,/g, ''), 10);
+  const start = performance.now();
+  const tick = (now) => {
+    const t = Math.min((now - start) / 1400, 1);
+    const eased = 1 - Math.pow(1 - t, 3);
+    el.textContent = m[1] + Math.round(target * eased).toLocaleString() + m[3];
+    if (t < 1) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+}
+
+function initMotion() {
+  // header shadow + gold scroll progress bar
+  const header = document.querySelector('.site-header');
+  const bar = document.createElement('div');
+  bar.className = 'scroll-progress';
+  document.body.appendChild(bar);
+  const onScroll = () => {
+    const max = document.documentElement.scrollHeight - innerHeight;
+    bar.style.transform = 'scaleX(' + (max > 0 ? scrollY / max : 0) + ')';
+    header.classList.toggle('scrolled', scrollY > 8);
+  };
+  addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // stagger items that share a parent
+  document.querySelectorAll('.reveal').forEach((el) => {
+    const sibs = [...el.parentElement.children].filter((c) => c.classList.contains('reveal'));
+    el.style.setProperty('--d', Math.min(sibs.indexOf(el), 5) * 0.09 + 's');
+  });
+}
+
 function initReveal() {
+  initMotion();
   const items = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
         if (e.isIntersecting || e.boundingClientRect.top < 0) {
           e.target.classList.add('in');
+          if (e.target.classList.contains('stat')) countUp(e.target.querySelector('strong'));
           io.unobserve(e.target);
         }
       });
