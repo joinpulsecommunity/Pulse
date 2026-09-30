@@ -1,9 +1,10 @@
 {
   "hero": {
-    "text": "We are an aspiring leadership and service organization that directly connects students to volunteer opportunities."
+    "text": "We are an aspiring leadership and service organization that directly connects students to volunteer opportunities.",
+    "image": "/assets/images/hero.jpg"
   },
   "about": {
-    "image": "",
+    "image": "/assets/images/about.jpg",
     "lead": "Every great community begins with people who choose to show up for one another.",
     "p1": "PULSE exists to turn good intentions into action. We bring students together around causes that matter, and we make it simple to get involved, give back, and see the difference it makes.",
     "p2": "Leadership is not a title. It is the decision to serve, to listen, and to lift others up. Together, we are building a school culture where every student has a place to lead.",
@@ -24,17 +25,17 @@
   },
   "programs": [
     {
-      "image": "",
+      "image": "/assets/images/community-service.jpg",
       "title": "Community Service",
       "text": "Hands-on opportunities to give back, from neighborhood projects to partnerships with local organizations."
     },
     {
-      "image": "",
+      "image": "/assets/images/fundraising.jpg",
       "title": "Fundraising",
       "text": "Student-led campaigns that turn creativity and effort into real support for the causes we care about."
     },
     {
-      "image": "",
+      "image": "/assets/images/leadership.jpg",
       "title": "Leadership Development",
       "text": "Growing confident, capable leaders through responsibility, collaboration, and real-world experience."
     }
@@ -112,35 +113,23 @@
       "name": "________________",
       "role": "____________",
       "bio": "____________________ ______________"
-    },
-    {
-      "photo": "",
-      "name": "________________",
-      "role": "____________",
-      "bio": "____________________ ______________"
-    },
-    {
-      "photo": "",
-      "name": "________________",
-      "role": "____________",
-      "bio": "____________________ ______________"
     }
   ],
   "gallery": [
     {
-      "image": ""
+      "image": "/assets/images/gallery-1.jpg"
     },
     {
-      "image": ""
+      "image": "/assets/images/gallery-2.jpg"
     },
     {
-      "image": ""
+      "image": "/assets/images/gallery-3.jpg"
     },
     {
-      "image": ""
+      "image": "/assets/images/gallery-4.jpg"
     },
     {
-      "image": ""
+      "image": "/assets/images/gallery-5.jpg"
     }
   ],
   "involve": [
@@ -166,19 +155,39 @@
   "contact": [
     {
       "label": "Email",
-      "value": "____________________"
+      "value": "join.pulse.community@gmail.com"
     },
     {
       "label": "Faculty Sponsor",
-      "value": "____________________"
+      "value": "None"
     },
     {
       "label": "Meetings",
-      "value": "____________________"
+      "value": ""
     },
     {
       "label": "Social",
-      "value": "____________________"
+      "value": ""
+    }
+  ],
+  "leads": [
+    {
+      "photo": "",
+      "name": "________________",
+      "role": "____________",
+      "bio": "____________________ ______________"
+    },
+    {
+      "photo": "",
+      "name": "________________",
+      "role": "____________",
+      "bio": "____________________ ______________"
+    },
+    {
+      "photo": "",
+      "name": "________________",
+      "role": "____________",
+      "bio": "____________________ ______________"
     }
   ]
 }

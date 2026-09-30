@@ -38,7 +38,10 @@ export default defineConfig({
             type: "object",
             name: "hero",
             label: "Home (Top of Page)",
-            fields: [{ type: "string", name: "text", label: "Intro Text", ui: textArea }],
+            fields: [
+              imageField("image", "Image"),
+              { type: "string", name: "text", label: "Intro Text", ui: textArea },
+            ],
           },
           {
             type: "object",
@@ -116,6 +119,19 @@ export default defineConfig({
             type: "object",
             name: "officers",
             label: "Officers",
+            list: true,
+            ui: { itemProps: (item: any) => ({ label: item?.name }) },
+            fields: [
+              imageField("photo", "Photo"),
+              { type: "string", name: "name", label: "Name" },
+              { type: "string", name: "role", label: "Role" },
+              { type: "string", name: "bio", label: "Short Bio", ui: textArea },
+            ],
+          },
+          {
+            type: "object",
+            name: "leads",
+            label: "Committee Leads",
             list: true,
             ui: { itemProps: (item: any) => ({ label: item?.name }) },
             fields: [

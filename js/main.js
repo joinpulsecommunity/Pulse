@@ -77,8 +77,10 @@ const builders = {
   },
   directors: (p) => person(p),
   officers: (p) => person(p),
+  leads: (p) => person(p),
   gallery: (g, i) => reveal(slot('g' + (i + 1), ICON_IMAGE, g.image, 'Gallery photo')),
   contact: (c) => {
+    if (!c.value) return null; // hide entries left empty
     const d = reveal(make('div', 'contact-item'));
     const h = make('h3', '', c.label);
     h.classList.remove('placeholder');
@@ -142,7 +144,7 @@ function renderContent(data) {
     }
 
     const build = builders[key];
-    if (build) container.replaceChildren(...items.map(build));
+    if (build) container.replaceChildren(...items.map(build).filter(Boolean));
   });
 }
 

@@ -427,3 +427,16 @@ html, body { overflow-x: hidden; }
   .js .section-head h2::after { width: 56px; transition: none; }
   .scroll-progress { display: none; }
 }
+
+/* Leadership layout: center groups of any size */
+.people--directors, .people--officers, .people--leads {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 280px));
+  justify-content: center;
+}
+.people--officers { margin-bottom: 72px; }
+.people--leads { margin-bottom: 0; }
+.people--officers .img-slot--portrait, .people--leads .img-slot--portrait { width: 170px; }
+.group-title--spaced { margin-top: 0; }
+@media (max-width: 980px) {
+  .people--directors, .people--officers, .people--leads { grid-template-columns: 1fr; }
+}
