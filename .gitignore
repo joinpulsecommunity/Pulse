@@ -11,3 +11,5 @@ tsconfig.tsbuildinfo
 .env
 .env.local
 tina/__generated__
+AGENTS.md
+CLAUDE.md
