@@ -131,20 +131,20 @@
     "directors": [
       {
         "photo": "",
-        "name": "________________",
-        "role": "____________",
+        "name": "Arjan Acharya",
+        "role": "Executive Director",
         "bio": "____________________ ____________________ ______________"
       },
       {
         "photo": "",
-        "name": "________________",
-        "role": "____________",
+        "name": "Ishaan Sathyaraj",
+        "role": "Executive Director",
         "bio": "____________________ ____________________ ______________"
       },
       {
         "photo": "",
-        "name": "________________",
-        "role": "____________",
+        "name": "Veer Panchal",
+        "role": "Executive Director",
         "bio": "____________________ ____________________ ______________"
       }
     ],
@@ -152,14 +152,14 @@
     "officers": [
       {
         "photo": "",
-        "name": "________________",
-        "role": "____________",
+        "name": "Vardhan Devata",
+        "role": "Officer",
         "bio": "____________________ ______________"
       },
       {
         "photo": "",
-        "name": "________________",
-        "role": "____________",
+        "name": "Gireesh Mohan",
+        "role": "Officer",
         "bio": "____________________ ______________"
       }
     ],
@@ -167,20 +167,20 @@
     "leads": [
       {
         "photo": "",
-        "name": "________________",
-        "role": "____________",
+        "name": "Shaurav Kasinaboyina",
+        "role": "Senior Outreach Lead",
         "bio": "____________________ ______________"
       },
       {
         "photo": "",
-        "name": "________________",
-        "role": "____________",
+        "name": "Tejas Kota",
+        "role": "Events and volunteer lead",
         "bio": "____________________ ______________"
       },
       {
         "photo": "",
-        "name": "________________",
-        "role": "____________",
+        "name": "Sathvik Kanchanapelly",
+        "role": "Fundraising and Marketing lead",
         "bio": "____________________ ______________"
       }
     ]
@@ -220,7 +220,7 @@
         "title": "Donate",
         "text": "Your support helps us reach more people and make a bigger impact in our community.",
         "buttonText": "Give Now",
-        "buttonUrl": "#contact"
+        "buttonUrl": "https://gofund.me/5db24ea02"
       },
       {
         "title": "Join the Club",
