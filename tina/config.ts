@@ -6,21 +6,38 @@ const branch =
   process.env.HEAD ||
   "main";
 
-const imageField = (name: string, label: string) => ({
-  type: "image" as const,
+const area = { component: "textarea" };
+const text = (name: string, label: string, long = false): any => ({
+  type: "string",
   name,
   label,
+  ...(long ? { ui: area } : {}),
 });
-
-const textArea = { component: "textarea" };
+const image = (name: string, label: string): any => ({ type: "image", name, label });
+const itemLabel = (key: string) => ({ itemProps: (item: any) => ({ label: item?.[key] || "(empty)" }) });
+const list = (name: string, labelText: string, key: string, fields: any[]): any => ({
+  type: "object",
+  name,
+  label: labelText,
+  list: true,
+  ui: itemLabel(key),
+  fields,
+});
+const section = (name: string, labelText: string, fields: any[]): any => ({
+  type: "object",
+  name,
+  label: labelText,
+  fields: [text("eyebrow", "Small Heading (above title)"), text("heading", "Section Title"), ...fields],
+});
+const person = [image("photo", "Photo"), text("name", "Name"), text("role", "Role"), text("bio", "Short Bio", true)];
 
 export default defineConfig({
   branch,
-  clientId: process.env.TINA_PUBLIC_CLIENT_ID,
+  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || process.env.TINA_PUBLIC_CLIENT_ID,
   token: process.env.TINA_TOKEN,
 
-  build: { outputFolder: "admin", publicFolder: "." },
-  media: { tina: { mediaRoot: "assets/images", publicFolder: "." } },
+  build: { outputFolder: "admin", publicFolder: "public" },
+  media: { tina: { mediaRoot: "assets/images", publicFolder: "public" } },
 
   schema: {
     collections: [
@@ -32,146 +49,78 @@ export default defineConfig({
         match: { include: "site" },
         ui: {
           allowedActions: { create: false, delete: false },
+          router: () => "/",
         },
         fields: [
+          {
+            type: "object",
+            name: "header",
+            label: "Top Bar",
+            fields: [text("subtitle", "Subtitle under PULSE"), text("cta", "Button Text")],
+          },
           {
             type: "object",
             name: "hero",
             label: "Home (Top of Page)",
             fields: [
-              imageField("image", "Image"),
-              { type: "string", name: "text", label: "Intro Text", ui: textArea },
+              text("eyebrow", "Small Heading"),
+              text("title", "Big Title"),
+              text("fullName", "Full Name"),
+              text("text", "Intro Text", true),
+              image("image", "Image"),
+              text("primaryLabel", "First Button Text"),
+              text("primaryUrl", "First Button Link"),
+              text("secondaryLabel", "Second Button Text"),
+              text("secondaryUrl", "Second Button Link"),
             ],
           },
+          list("strip", "Word Bar", "word", [text("word", "Word")]),
+          section("about", "About", [
+            image("image", "Image"),
+            text("lead", "Lead Paragraph", true),
+            text("p1", "Paragraph 2", true),
+            text("p2", "Paragraph 3", true),
+            list("pillars", "Mission / Vision / Values", "title", [text("title", "Title"), text("text", "Text", true)]),
+          ]),
+          section("programs", "Programs", [
+            list("items", "Programs", "title", [image("image", "Image"), text("title", "Title"), text("text", "Description", true)]),
+          ]),
+          section("events", "Events", [
+            text("detailsLabel", "Details Link Text"),
+            list("items", "Events", "title", [
+              text("day", "Day (e.g. 14)"),
+              text("month", "Month (e.g. OCT)"),
+              text("title", "Event Name"),
+              text("time", "Time"),
+              text("location", "Location"),
+            ]),
+          ]),
+          section("impact", "Impact Numbers", [
+            list("items", "Numbers", "label", [text("number", "Number"), text("label", "Label")]),
+          ]),
+          section("leadership", "Directors, Officers & Leads", [
+            text("directorsTitle", "Directors Heading"),
+            list("directors", "Directors", "name", person),
+            text("officersTitle", "Officers Heading"),
+            list("officers", "Officers", "name", person),
+            text("leadsTitle", "Committee Leads Heading"),
+            list("leads", "Committee Leads", "name", person),
+          ]),
+          section("gallery", "Gallery", [list("images", "Photos", "image", [image("image", "Photo")])]),
+          section("involve", "Get Involved", [
+            list("items", "Cards", "title", [
+              text("title", "Title"),
+              text("text", "Text", true),
+              text("buttonText", "Button Text"),
+              text("buttonUrl", "Button Link (web address or #contact)"),
+            ]),
+          ]),
+          section("contact", "Contact", [list("items", "Contact Info", "label", [text("label", "Label"), text("value", "Value")])]),
           {
             type: "object",
-            name: "about",
-            label: "About",
-            fields: [
-              imageField("image", "Image"),
-              { type: "string", name: "lead", label: "Lead Paragraph", ui: textArea },
-              { type: "string", name: "p1", label: "Paragraph 2", ui: textArea },
-              { type: "string", name: "p2", label: "Paragraph 3", ui: textArea },
-              {
-                type: "object",
-                name: "pillars",
-                label: "Mission / Vision / Values",
-                list: true,
-                ui: { itemProps: (item: any) => ({ label: item?.title }) },
-                fields: [
-                  { type: "string", name: "title", label: "Title" },
-                  { type: "string", name: "text", label: "Text", ui: textArea },
-                ],
-              },
-            ],
-          },
-          {
-            type: "object",
-            name: "programs",
-            label: "Programs",
-            list: true,
-            ui: { itemProps: (item: any) => ({ label: item?.title }) },
-            fields: [
-              imageField("image", "Image"),
-              { type: "string", name: "title", label: "Title" },
-              { type: "string", name: "text", label: "Description", ui: textArea },
-            ],
-          },
-          {
-            type: "object",
-            name: "events",
-            label: "Events",
-            list: true,
-            ui: { itemProps: (item: any) => ({ label: item?.title }) },
-            fields: [
-              { type: "string", name: "day", label: "Day (e.g. 14)" },
-              { type: "string", name: "month", label: "Month (e.g. OCT)" },
-              { type: "string", name: "title", label: "Event Name" },
-              { type: "string", name: "time", label: "Time" },
-              { type: "string", name: "location", label: "Location" },
-            ],
-          },
-          {
-            type: "object",
-            name: "impact",
-            label: "Impact Numbers",
-            list: true,
-            ui: { itemProps: (item: any) => ({ label: item?.label }) },
-            fields: [
-              { type: "string", name: "number", label: "Number" },
-              { type: "string", name: "label", label: "Label" },
-            ],
-          },
-          {
-            type: "object",
-            name: "directors",
-            label: "Directors",
-            list: true,
-            ui: { itemProps: (item: any) => ({ label: item?.name }) },
-            fields: [
-              imageField("photo", "Photo"),
-              { type: "string", name: "name", label: "Name" },
-              { type: "string", name: "role", label: "Role" },
-              { type: "string", name: "bio", label: "Short Bio", ui: textArea },
-            ],
-          },
-          {
-            type: "object",
-            name: "officers",
-            label: "Officers",
-            list: true,
-            ui: { itemProps: (item: any) => ({ label: item?.name }) },
-            fields: [
-              imageField("photo", "Photo"),
-              { type: "string", name: "name", label: "Name" },
-              { type: "string", name: "role", label: "Role" },
-              { type: "string", name: "bio", label: "Short Bio", ui: textArea },
-            ],
-          },
-          {
-            type: "object",
-            name: "leads",
-            label: "Committee Leads",
-            list: true,
-            ui: { itemProps: (item: any) => ({ label: item?.name }) },
-            fields: [
-              imageField("photo", "Photo"),
-              { type: "string", name: "name", label: "Name" },
-              { type: "string", name: "role", label: "Role" },
-              { type: "string", name: "bio", label: "Short Bio", ui: textArea },
-            ],
-          },
-          {
-            type: "object",
-            name: "gallery",
-            label: "Gallery Photos",
-            list: true,
-            ui: { itemProps: (item: any) => ({ label: item?.image || "Photo" }) },
-            fields: [imageField("image", "Photo")],
-          },
-          {
-            type: "object",
-            name: "involve",
-            label: "Get Involved (Volunteer / Donate / Join)",
-            list: true,
-            ui: { itemProps: (item: any) => ({ label: item?.title }) },
-            fields: [
-              { type: "string", name: "title", label: "Title" },
-              { type: "string", name: "text", label: "Text", ui: textArea },
-              { type: "string", name: "buttonText", label: "Button Text" },
-              { type: "string", name: "buttonUrl", label: "Button Link (web address or #contact)" },
-            ],
-          },
-          {
-            type: "object",
-            name: "contact",
-            label: "Contact",
-            list: true,
-            ui: { itemProps: (item: any) => ({ label: item?.label }) },
-            fields: [
-              { type: "string", name: "label", label: "Label" },
-              { type: "string", name: "value", label: "Value" },
-            ],
+            name: "footer",
+            label: "Footer",
+            fields: [text("tagline", "Full Name Line"), text("school", "School Name")],
           },
         ],
       },

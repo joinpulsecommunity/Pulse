@@ -1,9 +1,39 @@
 {
-  "hero": {
-    "text": "We are an aspiring leadership and service organization that directly connects students to volunteer opportunities.",
-    "image": "/assets/images/hero.jpg"
+  "header": {
+    "subtitle": "South Forsyth High School",
+    "cta": "Get Involved"
   },
+  "hero": {
+    "eyebrow": "South Forsyth High School",
+    "title": "PULSE",
+    "fullName": "Public Unified Leadership and Service Enterprise",
+    "text": "We are an aspiring leadership and service organization that directly connects students to volunteer opportunities.",
+    "image": "/assets/images/hero.jpg",
+    "primaryLabel": "Join PULSE",
+    "primaryUrl": "#get-involved",
+    "secondaryLabel": "Donate",
+    "secondaryUrl": "#get-involved"
+  },
+  "strip": [
+    {
+      "word": "Public"
+    },
+    {
+      "word": "Unified"
+    },
+    {
+      "word": "Leadership"
+    },
+    {
+      "word": "Service"
+    },
+    {
+      "word": "Enterprise"
+    }
+  ],
   "about": {
+    "eyebrow": "Who We Are",
+    "heading": "About PULSE",
     "image": "/assets/images/about.jpg",
     "lead": "Every great community begins with people who choose to show up for one another.",
     "p1": "PULSE exists to turn good intentions into action. We bring students together around causes that matter, and we make it simple to get involved, give back, and see the difference it makes.",
@@ -23,171 +53,207 @@
       }
     ]
   },
-  "programs": [
-    {
-      "image": "/assets/images/community-service.jpg",
-      "title": "Community Service",
-      "text": "Hands-on opportunities to give back, from neighborhood projects to partnerships with local organizations."
-    },
-    {
-      "image": "/assets/images/fundraising.jpg",
-      "title": "Fundraising",
-      "text": "Student-led campaigns that turn creativity and effort into real support for the causes we care about."
-    },
-    {
-      "image": "/assets/images/leadership.jpg",
-      "title": "Leadership Development",
-      "text": "Growing confident, capable leaders through responsibility, collaboration, and real-world experience."
-    }
-  ],
-  "events": [
-    {
-      "day": "__",
-      "month": "___",
-      "title": "______________________",
-      "time": "______________",
-      "location": "______________"
-    },
-    {
-      "day": "__",
-      "month": "___",
-      "title": "______________________",
-      "time": "______________",
-      "location": "______________"
-    },
-    {
-      "day": "__",
-      "month": "___",
-      "title": "______________________",
-      "time": "______________",
-      "location": "______________"
-    }
-  ],
-  "impact": [
-    {
-      "number": "____",
-      "label": "__________"
-    },
-    {
-      "number": "____",
-      "label": "__________"
-    },
-    {
-      "number": "____",
-      "label": "__________"
-    },
-    {
-      "number": "____",
-      "label": "__________"
-    }
-  ],
-  "directors": [
-    {
-      "photo": "",
-      "name": "________________",
-      "role": "____________",
-      "bio": "____________________ ____________________ ______________"
-    },
-    {
-      "photo": "",
-      "name": "________________",
-      "role": "____________",
-      "bio": "____________________ ____________________ ______________"
-    },
-    {
-      "photo": "",
-      "name": "________________",
-      "role": "____________",
-      "bio": "____________________ ____________________ ______________"
-    }
-  ],
-  "officers": [
-    {
-      "photo": "",
-      "name": "________________",
-      "role": "____________",
-      "bio": "____________________ ______________"
-    },
-    {
-      "photo": "",
-      "name": "________________",
-      "role": "____________",
-      "bio": "____________________ ______________"
-    }
-  ],
-  "gallery": [
-    {
-      "image": "/assets/images/gallery-1.jpg"
-    },
-    {
-      "image": "/assets/images/gallery-2.jpg"
-    },
-    {
-      "image": "/assets/images/gallery-3.jpg"
-    },
-    {
-      "image": "/assets/images/gallery-4.jpg"
-    },
-    {
-      "image": "/assets/images/gallery-5.jpg"
-    }
-  ],
-  "involve": [
-    {
-      "title": "Volunteer",
-      "text": "Give your time and talent. Every hour you serve makes a lasting difference.",
-      "buttonText": "Sign Up",
-      "buttonUrl": "#contact"
-    },
-    {
-      "title": "Donate",
-      "text": "Your support helps us reach more people and make a bigger impact in our community.",
-      "buttonText": "Give Now",
-      "buttonUrl": "#contact"
-    },
-    {
-      "title": "Join the Club",
-      "text": "Become part of a team of students who lead with purpose and serve with heart.",
-      "buttonText": "Learn More",
-      "buttonUrl": "#contact"
-    }
-  ],
-  "contact": [
-    {
-      "label": "Email",
-      "value": "join.pulse.community@gmail.com"
-    },
-    {
-      "label": "Faculty Sponsor",
-      "value": "None"
-    },
-    {
-      "label": "Meetings",
-      "value": ""
-    },
-    {
-      "label": "Social",
-      "value": ""
-    }
-  ],
-  "leads": [
-    {
-      "photo": "",
-      "name": "________________",
-      "role": "____________",
-      "bio": "____________________ ______________"
-    },
-    {
-      "photo": "",
-      "name": "________________",
-      "role": "____________",
-      "bio": "____________________ ______________"
-    },
-    {
-      "photo": "",
-      "name": "________________",
-      "role": "____________",
-      "bio": "____________________ ______________"
-    }
-  ]
+  "programs": {
+    "eyebrow": "What We Do",
+    "heading": "Our Programs",
+    "items": [
+      {
+        "image": "/assets/images/community-service.jpg",
+        "title": "Community Service",
+        "text": "Hands-on opportunities to give back, from neighborhood projects to partnerships with local organizations."
+      },
+      {
+        "image": "/assets/images/fundraising.jpg",
+        "title": "Fundraising",
+        "text": "Student-led campaigns that turn creativity and effort into real support for the causes we care about."
+      },
+      {
+        "image": "/assets/images/leadership.jpg",
+        "title": "Leadership Development",
+        "text": "Growing confident, capable leaders through responsibility, collaboration, and real-world experience."
+      }
+    ]
+  },
+  "events": {
+    "eyebrow": "On the Calendar",
+    "heading": "Upcoming Events",
+    "detailsLabel": "Details",
+    "items": [
+      {
+        "day": "__",
+        "month": "___",
+        "title": "______________________",
+        "time": "______________",
+        "location": "______________"
+      },
+      {
+        "day": "__",
+        "month": "___",
+        "title": "______________________",
+        "time": "______________",
+        "location": "______________"
+      },
+      {
+        "day": "__",
+        "month": "___",
+        "title": "______________________",
+        "time": "______________",
+        "location": "______________"
+      }
+    ]
+  },
+  "impact": {
+    "eyebrow": "By the Numbers",
+    "heading": "Our Impact",
+    "items": [
+      {
+        "number": "____",
+        "label": "__________"
+      },
+      {
+        "number": "____",
+        "label": "__________"
+      },
+      {
+        "number": "____",
+        "label": "__________"
+      },
+      {
+        "number": "____",
+        "label": "__________"
+      }
+    ]
+  },
+  "leadership": {
+    "eyebrow": "Our Team",
+    "heading": "Directors, Officers & Leads",
+    "directorsTitle": "Directors",
+    "directors": [
+      {
+        "photo": "",
+        "name": "________________",
+        "role": "____________",
+        "bio": "____________________ ____________________ ______________"
+      },
+      {
+        "photo": "",
+        "name": "________________",
+        "role": "____________",
+        "bio": "____________________ ____________________ ______________"
+      },
+      {
+        "photo": "",
+        "name": "________________",
+        "role": "____________",
+        "bio": "____________________ ____________________ ______________"
+      }
+    ],
+    "officersTitle": "Officers",
+    "officers": [
+      {
+        "photo": "",
+        "name": "________________",
+        "role": "____________",
+        "bio": "____________________ ______________"
+      },
+      {
+        "photo": "",
+        "name": "________________",
+        "role": "____________",
+        "bio": "____________________ ______________"
+      }
+    ],
+    "leadsTitle": "Committee Leads",
+    "leads": [
+      {
+        "photo": "",
+        "name": "________________",
+        "role": "____________",
+        "bio": "____________________ ______________"
+      },
+      {
+        "photo": "",
+        "name": "________________",
+        "role": "____________",
+        "bio": "____________________ ______________"
+      },
+      {
+        "photo": "",
+        "name": "________________",
+        "role": "____________",
+        "bio": "____________________ ______________"
+      }
+    ]
+  },
+  "gallery": {
+    "eyebrow": "In Action",
+    "heading": "Gallery",
+    "images": [
+      {
+        "image": "/assets/images/gallery-1.jpg"
+      },
+      {
+        "image": "/assets/images/gallery-2.jpg"
+      },
+      {
+        "image": "/assets/images/gallery-3.jpg"
+      },
+      {
+        "image": "/assets/images/gallery-4.jpg"
+      },
+      {
+        "image": "/assets/images/gallery-5.jpg"
+      }
+    ]
+  },
+  "involve": {
+    "eyebrow": "Take Part",
+    "heading": "Get Involved",
+    "items": [
+      {
+        "title": "Volunteer",
+        "text": "Give your time and talent. Every hour you serve makes a lasting difference.",
+        "buttonText": "Sign Up",
+        "buttonUrl": "#contact"
+      },
+      {
+        "title": "Donate",
+        "text": "Your support helps us reach more people and make a bigger impact in our community.",
+        "buttonText": "Give Now",
+        "buttonUrl": "#contact"
+      },
+      {
+        "title": "Join the Club",
+        "text": "Become part of a team of students who lead with purpose and serve with heart.",
+        "buttonText": "Learn More",
+        "buttonUrl": "#contact"
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Reach Out",
+    "heading": "Contact",
+    "items": [
+      {
+        "label": "Email",
+        "value": "join.pulse.community@gmail.com"
+      },
+      {
+        "label": "Faculty Sponsor",
+        "value": "None"
+      },
+      {
+        "label": "Meetings",
+        "value": ""
+      },
+      {
+        "label": "Social",
+        "value": ""
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Public Unified Leadership and Service Enterprise",
+    "school": "South Forsyth High School"
+  }
 }

@@ -2,7 +2,12 @@
 .DS_Store
 Thumbs.db
 node_modules
+.next
+out
 dist
-admin
+public/admin
+next-env.d.ts
+tsconfig.tsbuildinfo
 .env
 .env.local
+tina/__generated__
