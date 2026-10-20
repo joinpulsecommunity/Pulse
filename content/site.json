@@ -132,7 +132,7 @@
   },
   "leadership": {
     "eyebrow": "Our Team",
-    "heading": "Directors, Officers & Leads",
+    "heading": "Directors, Managers & Committee Leaders",
     "directorsTitle": "Directors",
     "directors": [
       {
@@ -160,34 +160,34 @@
         "photo": "",
         "name": "Vardhan Devata",
         "role": "Social Media Manager",
-        "bio": "____________________ ______________"
+        "bio": "Social Media Admin, Board Liaison"
       },
       {
         "photo": "",
         "name": "Gireesh Mohan",
         "role": "Outreach manager",
-        "bio": "____________________ ______________"
+        "bio": "Outreach and Planning Organizer, Board Liaison"
       }
     ],
-    "leadsTitle": "Committee Leads",
+    "leadsTitle": "Committee Leaders",
     "leads": [
       {
         "photo": "",
         "name": "Shaurav Kasinaboyina",
         "role": "Senior Outreach Lead",
-        "bio": "____________________ ______________"
+        "bio": "Lead Web-Developer, Communications"
       },
       {
         "photo": "",
         "name": "Tejas Kota",
         "role": "Events and volunteering lead",
-        "bio": "____________________ ______________"
+        "bio": "Organizer, Event Planner"
       },
       {
         "photo": "",
         "name": "Sathvik Kanchanapelly",
         "role": "Fundraising and Marketing lead",
-        "bio": "____________________ ______________"
+        "bio": "Finance Manager, Event Planner"
       }
     ]
   },
