@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { tinaField } from "tinacms/dist/react";
+import Announcements from "./Announcements";
 import { CountNumber, Reveal, Slot, T, isBlank, ph, useInEditor } from "./ui";
 
 type Data = any;
@@ -32,6 +33,7 @@ function Header({ s }: { s: Data }) {
 
   const close = () => setOpen(false);
   const links = [
+    ["#announcements", "News"],
     ["#about", "About"],
     ["#programs", "Programs"],
     ["#events", "Events"],
@@ -377,7 +379,10 @@ function Footer({ f }: { f: Data }) {
           &copy; {year} PULSE &middot; {f?.school}
         </p>
         <p className="footer-links">
-          <a href="/admin/index.html" className="editor-link">
+          <a href="/manage" className="editor-link">
+            Admin Login
+          </a>
+          <a href="/admin" className="editor-link">
             Editor Login
           </a>
           <a href="#top">Back to top &uarr;</a>
@@ -396,6 +401,7 @@ export default function Site({ s }: { s: Data }) {
       <main>
         <Hero h={s.hero} />
         <Strip items={list(s.strip)} />
+        <Announcements a={s.announcements} />
         <About a={s.about} />
         <Programs p={s.programs} />
         <Events e={s.events} />

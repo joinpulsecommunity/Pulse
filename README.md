@@ -10,10 +10,20 @@ Public Unified Leadership and Service Enterprise. A Next.js site with TinaCMS cl
 
 New editors are added in Tina Cloud: [app.tina.io](https://app.tina.io) → your project → **Users**.
 
+## Announcements (for admins)
+
+1. Go to `/manage` (or "Admin Login" in the footer) and enter the admin password.
+2. Type a title and message, press **Post Announcement**. It shows on the website immediately for everyone and stays until you delete it from the same page.
+
+This is separate from the Tina editor (`/admin`), which edits the page text and photos.
+
 ## Structure
 
 ```
 pages/index.tsx       the page (loads content from Tina)
+pages/manage.tsx      admin login + announcement poster
+pages/api/            announcements + admin login endpoints
+lib/                  database + login helpers
 components/Site.tsx   every section of the page
 components/ui.tsx     shared pieces (animations, photo slots, click-to-edit text)
 styles/styles.css     all styling (colors are variables at the top)
@@ -30,6 +40,8 @@ public/assets/images  photos (credits in CREDITS.md)
 | --- | --- |
 | `TINA_PUBLIC_CLIENT_ID` | your Client ID |
 | `TINA_TOKEN` | your Read Only Token |
+
+**For announcements** also add `ADMIN_PASSWORD` (the password you pick), and connect a free **Upstash Redis** database from the Vercel project's **Storage** tab (this adds `KV_REST_API_URL` and `KV_REST_API_TOKEN` automatically).
 
 Then redeploy. In Tina Cloud, set **Site URLs** to your Vercel address.
 

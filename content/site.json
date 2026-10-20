@@ -31,6 +31,11 @@
       "word": "Enterprise"
     }
   ],
+  "announcements": {
+    "eyebrow": "Latest News",
+    "heading": "Announcements",
+    "emptyText": "No announcements right now. Check back soon."
+  },
   "about": {
     "eyebrow": "Who We Are",
     "heading": "About PULSE",

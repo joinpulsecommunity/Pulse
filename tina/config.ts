@@ -75,6 +75,7 @@ export default defineConfig({
             ],
           },
           list("strip", "Word Bar", "word", [text("word", "Word")]),
+          section("announcements", "Announcements Section", [text("emptyText", "Text When There Are No Announcements")]),
           section("about", "About", [
             image("image", "Image"),
             text("lead", "Lead Paragraph", true),
