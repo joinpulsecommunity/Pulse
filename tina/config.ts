@@ -56,7 +56,7 @@ export default defineConfig({
             type: "object",
             name: "header",
             label: "Top Bar",
-            fields: [text("subtitle", "Subtitle under PULSE"), text("cta", "Button Text")],
+            fields: [text("subtitle", "Subtitle under PULSE"), text("cta", "Button Text"), text("manage", "Admin Button Text (top right)")],
           },
           {
             type: "object",

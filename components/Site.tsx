@@ -57,11 +57,6 @@ function Header({ s }: { s: Data }) {
               <small data-tina-field={tf(s.header, "subtitle")}>{s.header?.subtitle}</small>
             </span>
           </a>
-          <button className="nav-toggle" aria-label="Toggle menu" aria-expanded={open} aria-controls="nav" onClick={() => setOpen(!open)}>
-            <span />
-            <span />
-            <span />
-          </button>
           <nav id="nav" className={`nav${open ? " open" : ""}`}>
             {links.map(([href, label]) => (
               <a key={href} href={href} onClick={close}>
@@ -72,6 +67,16 @@ function Header({ s }: { s: Data }) {
               {s.header?.cta}
             </a>
           </nav>
+          <div className="header-right">
+            <a href="/manage" className="manage-btn" data-tina-field={tf(s.header, "manage")}>
+              {s.header?.manage || "Manage"}
+            </a>
+            <button className="nav-toggle" aria-label="Toggle menu" aria-expanded={open} aria-controls="nav" onClick={() => setOpen(!open)}>
+              <span />
+              <span />
+              <span />
+            </button>
+          </div>
         </div>
       </header>
     </>
