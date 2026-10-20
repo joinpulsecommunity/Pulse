@@ -538,3 +538,33 @@ html, body { overflow-x: hidden; }
 }
 @media (min-width: 1261px) { .nav-toggle { display: none; } }
 @media (max-width: 380px) { .manage-btn { padding: 7px 12px; font-size: .8rem; } }
+
+/* ---------- Contact form ---------- */
+.contact-form-wrap {
+  margin-top: 56px; max-width: 760px;
+  background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 40px; box-shadow: var(--shadow);
+}
+.contact-form-title { font: 700 2rem/1.1 var(--font-head); color: var(--navy); margin-bottom: 22px; }
+.contact-form { display: grid; gap: 8px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.contact-form label { display: block; font: 600 .88rem var(--font-body); color: var(--ink); margin: 10px 0 6px; }
+.contact-form input, .contact-form textarea {
+  width: 100%; font: 400 1rem var(--font-body); color: var(--ink);
+  padding: 13px 14px; border: 1px solid #cfd6e2; border-radius: 6px; background: var(--white);
+  transition: border-color .2s, box-shadow .2s;
+}
+.contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(224, 165, 38, .25); }
+.contact-form textarea { resize: vertical; min-height: 140px; }
+.contact-form .btn { justify-self: start; margin-top: 14px; cursor: pointer; }
+.contact-form .btn[disabled] { opacity: .6; cursor: wait; }
+.hp-field { position: absolute !important; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.form-error { background: #fdecec; color: #a12727; padding: 12px 16px; border-radius: 6px; font-size: .92rem; margin-top: 10px; }
+.form-success { display: grid; justify-items: start; gap: 14px; color: var(--navy); }
+.form-success svg { width: 52px; height: 52px; color: #2e9e5b; animation: pop .5s ease; }
+.form-success p { color: var(--ink); font-size: 1.05rem; }
+@keyframes pop { from { transform: scale(.4); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+@media (max-width: 600px) {
+  .contact-form-wrap { padding: 26px 22px; }
+  .form-row { grid-template-columns: 1fr; gap: 0; }
+}

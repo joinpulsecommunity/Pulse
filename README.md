@@ -17,6 +17,10 @@ New editors are added in Tina Cloud: [app.tina.io](https://app.tina.io) → your
 
 This is separate from the Tina editor (`/admin`), which edits the page text and photos.
 
+## Contact form
+
+The "Send Us a Message" form on the site emails every message to the club Gmail inbox, with Reply-To set to the visitor so you can just hit Reply. It needs two Vercel environment variables: `GMAIL_USER` (the Gmail address) and `GMAIL_APP_PASSWORD` (a Google "app password" for that account). Optional: `CONTACT_TO` to deliver to a different inbox.
+
 ## Structure
 
 ```

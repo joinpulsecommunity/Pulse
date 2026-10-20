@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { tinaField } from "tinacms/dist/react";
 import Announcements from "./Announcements";
+import ContactForm from "./ContactForm";
 import { CountNumber, Reveal, Slot, T, isBlank, ph, useInEditor } from "./ui";
 
 type Data = any;
@@ -353,6 +354,7 @@ function Contact({ c }: { c: Data }) {
             </Reveal>
           ))}
         </div>
+        <ContactForm c={c} />
       </div>
     </section>
   );

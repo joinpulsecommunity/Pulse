@@ -116,7 +116,7 @@ export default defineConfig({
               text("buttonUrl", "Button Link (web address or #contact)"),
             ]),
           ]),
-          section("contact", "Contact", [list("items", "Contact Info", "label", [text("label", "Label"), text("value", "Value")])]),
+          section("contact", "Contact", [text("formTitle", "Message Form Title"), text("buttonText", "Send Button Text"), text("successText", "Message After Sending", true), list("items", "Contact Info", "label", [text("label", "Label"), text("value", "Value")])]),
           {
             type: "object",
             name: "footer",

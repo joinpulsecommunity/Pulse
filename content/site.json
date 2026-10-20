@@ -239,6 +239,9 @@
   "contact": {
     "eyebrow": "Reach Out",
     "heading": "Contact",
+    "formTitle": "Send Us a Message",
+    "buttonText": "Send Message",
+    "successText": "Thank you! Your message has been sent. We will get back to you soon.",
     "items": [
       {
         "label": "Email",
