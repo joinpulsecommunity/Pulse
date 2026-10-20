@@ -139,7 +139,7 @@
         "photo": "",
         "name": "Arjan Acharya",
         "role": "Executive Director",
-        "bio": "____________________ ____________________ ______________"
+        "bio": "FOUNDER"
       },
       {
         "photo": "",
@@ -154,18 +154,18 @@
         "bio": "____________________ ____________________ ______________"
       }
     ],
-    "officersTitle": "Officers",
+    "officersTitle": "Managers",
     "officers": [
       {
         "photo": "",
         "name": "Vardhan Devata",
-        "role": "Officer",
+        "role": "Social Media Manager",
         "bio": "____________________ ______________"
       },
       {
         "photo": "",
         "name": "Gireesh Mohan",
-        "role": "Officer",
+        "role": "Outreach manager",
         "bio": "____________________ ______________"
       }
     ],
@@ -180,7 +180,7 @@
       {
         "photo": "",
         "name": "Tejas Kota",
-        "role": "Events and volunteer lead",
+        "role": "Events and volunteering lead",
         "bio": "____________________ ______________"
       },
       {
